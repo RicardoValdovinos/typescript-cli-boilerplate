@@ -10,7 +10,6 @@
 		"setup": "git init && husky install",
 		"format": "prettier src/**/*.tsx --write",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"dev": "tsc --watch -p tsconfig.json",
 		"test": "ava",
 		"build": "tsc -p tsconfig.json && caxa -i dist/ -o bin/${npm_package_name} -- \"node\" \"dist/cli.js\"",
 		"start": "./bin/${npm_package_name}",
