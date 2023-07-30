@@ -39,7 +39,6 @@
 		"cz-conventional-changelog": "3.3.0",
 		"eslint": "^8.46.0",
 		"eslint-config-prettier": "^8.9.0",
-		"eslint-config-xo-react": "^0.27.0",
 		"eslint-plugin-react": "^7.33.0",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
@@ -59,8 +58,8 @@
 		]
 	},
 	"config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	}
 }
