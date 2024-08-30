@@ -1,58 +1,80 @@
 {
-	"name": "typescript-cli-boilerplate",
-	"version": "1.0.0",
-	"description": "A TypeScript starter project for the CLI",
-	"author": "Ricardo Valdovinos <ricardovaldovinos1996@gmail.com>",
-	"license": "MIT",
-	"bin": "dist/cli.js",
-	"type": "module",
-	"scripts": {
-		"setup": "git init && husky install",
-		"format": "prettier src/**/*.tsx --write",
-		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"test": "ava",
-		"build": "tsc -p tsconfig.json && caxa -i dist/ -o bin/${npm_package_name} -- \"node\" \"dist/cli.js\"",
-		"start": "./bin/${npm_package_name}",
-		"clean": "rm -rf dist bin",
-		"commitlint": "commitlint --edit",
-		"commitizen": "exec < /dev/tty && git cz --hook || true"
-	},
-	"files": [
-		"dist"
-	],
-	"dependencies": {
-		"@inquirer/prompts": "^5.3.8",
-		"ink": "^5.0.1",
-		"meow": "^13.2.0",
-		"react": "^18.3.1",
-		"typescript-eslint": "^8.3.0"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^19.4.1",
-		"@commitlint/config-conventional": "^19.4.1",
-		"@types/eslint__js": "^8.42.3",
-		"@types/react": "^18.3.5",
-		"@typescript-eslint/eslint-plugin": "^8.3.0",
-		"@typescript-eslint/parser": "^8.3.0",
-		"caxa": "^3.0.1",
-		"chalk": "^5.3.0",
-		"commitizen": "^4.3.0",
-		"cz-conventional-changelog": "3.3.0",
-		"eslint": "^9.9.1",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-n": "^17.10.2",
-		"eslint-plugin-react": "^7.35.0",
-		"eslint-plugin-react-hooks": "^4.6.2",
-		"eslint-plugin-react-refresh": "^0.4.11",
-		"eslint-plugin-unicorn": "^55.0.0",
-		"globals": "^15.9.0",
-		"husky": "^9.1.5",
-		"prettier": "^3.3.3",
-		"typescript": "^5.5.4"
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	}
+  "name": "typescript-cli-boilerplate",
+  "version": "1.0.0",
+  "description": "A TypeScript starter project for the CLI",
+  "author": "Ricardo Valdovinos <ricardovaldovinos1996@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "0": "d",
+    "1": "i",
+    "2": "s",
+    "3": "t",
+    "4": "/",
+    "5": "c",
+    "6": "l",
+    "7": "i",
+    "8": ".",
+    "9": "j",
+    "10": "s",
+    "typescript-cli-boilerplate": "./bin/run.js"
+  },
+  "type": "module",
+  "scripts": {
+    "setup": "git init && husky install",
+    "format": "prettier src/**/*.tsx --write",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "ava",
+    "build": "tsc -p tsconfig.json && caxa -i dist/ -o bin/${npm_package_name} -- \"node\" \"dist/cli.js\"",
+    "start": "./bin/${npm_package_name}",
+    "clean": "rm -rf dist bin",
+    "commitlint": "commitlint --edit",
+    "commitizen": "exec < /dev/tty && git cz --hook || true"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "@oclif/core": "^4.0.19",
+    "ink": "^5.0.1",
+    "meow": "^13.2.0",
+    "react": "^18.3.1",
+    "typescript-eslint": "^8.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^18",
+    "@types/react": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "caxa": "^3.0.1",
+    "chalk": "^5.3.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "eslint-plugin-unicorn": "^55.0.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "oclif": {
+    "bin": "typescript-cli-boilerplate",
+    "commands": "./dist/commands",
+    "dirname": "typescript-cli-boilerplate",
+    "topicSeparator": " "
+  }
 }
