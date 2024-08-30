@@ -17,6 +17,13 @@
     "build": "tsc -p tsconfig.json",
     "start": "./bin/${npm_package_name}",
     "clean": "rm -rf dist bin",
+    "oclif:generate:command": "oclif generate command",
+    "oclif:generate:hook": "oclif generate hook",
+    "oclif:readme": "oclif generate hook",
+    "oclif:pack:deb": "oclif pack deb -r",
+    "oclif:pack:macos": "oclif pack deb -r",
+    "oclif:pack:tarballs": "oclif pack deb -r",
+    "oclif:pack:win": "oclif pack deb -r",
     "commitlint": "commitlint --edit",
     "commitizen": "exec < /dev/tty && git cz --hook || true"
   },
