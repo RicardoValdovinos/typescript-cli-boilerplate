@@ -21,40 +21,33 @@
 		"dist"
 	],
 	"dependencies": {
-		"ink": "^4.3.0",
-		"meow": "^11.0.0",
-		"react": "^18.2.0"
+		"ink": "^5.0.1",
+		"meow": "^13.2.0",
+		"react": "^18.3.1",
+		"typescript-eslint": "^8.3.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.6.7",
-		"@commitlint/config-conventional": "^17.6.7",
-		"@types/react": "^18.2.17",
-		"@typescript-eslint/eslint-plugin": "^6.2.0",
-		"@typescript-eslint/parser": "^6.2.0",
-		"ava": "^5.3.1",
+		"@commitlint/cli": "^19.4.1",
+		"@commitlint/config-conventional": "^19.4.1",
+		"@types/eslint__js": "^8.42.3",
+		"@types/react": "^18.3.5",
+		"@typescript-eslint/eslint-plugin": "^8.3.0",
+		"@typescript-eslint/parser": "^8.3.0",
 		"caxa": "^3.0.1",
 		"chalk": "^5.3.0",
 		"commitizen": "^4.3.0",
 		"cz-conventional-changelog": "3.3.0",
-		"eslint": "^8.46.0",
-		"eslint-config-prettier": "^8.9.0",
-		"eslint-plugin-react": "^7.33.0",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-react-refresh": "^0.4.3",
-		"eslint-plugin-unicorn": "^48.0.1",
-		"husky": "^8.0.3",
-		"ink-testing-library": "^3.0.0",
-		"prettier": "^2.8.8",
-		"typescript": "^5.1.6"
-	},
-	"ava": {
-		"extensions": {
-			"ts": "module",
-			"tsx": "module"
-		},
-		"nodeArguments": [
-			"--loader=ts-node/esm"
-		]
+		"eslint": "^9.9.1",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-n": "^17.10.2",
+		"eslint-plugin-react": "^7.35.0",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-refresh": "^0.4.11",
+		"eslint-plugin-unicorn": "^55.0.0",
+		"globals": "^15.9.0",
+		"husky": "^9.1.5",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.4"
 	},
 	"config": {
 		"commitizen": {
