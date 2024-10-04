@@ -1,16 +1,16 @@
 // @ts-check
-import eslintJS from '@eslint/js';
+import eslintJS from "@eslint/js";
 import typescriptESLintParser from "@typescript-eslint/parser";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
-import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginN from 'eslint-plugin-n';
-import eslintPluginSecurity from 'eslint-plugin-security';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginN from "eslint-plugin-n";
+import eslintPluginSecurity from "eslint-plugin-security";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import {
 	config as typescriptESLintConfig,
-	configs as typescriptESLintConfigs
-} from 'typescript-eslint';
+	configs as typescriptESLintConfigs,
+} from "typescript-eslint";
 
 const eslintConfig = typescriptESLintConfig(
 	{ files: ["src/**/*.ts"] },
@@ -35,9 +35,9 @@ const eslintConfig = typescriptESLintConfig(
 			"no-unused-private-class-members": "error",
 			"require-atomic-updates": "error",
 			"no-use-before-define": "error",
-			"camelcase": "error",
+			camelcase: "error",
 			"no-return-await": "off",
-		}
+		},
 	},
 	...typescriptESLintConfigs.recommendedTypeChecked,
 	{
@@ -51,8 +51,8 @@ const eslintConfig = typescriptESLintConfig(
 			},
 		},
 		plugins: {
-      '@typescript-eslint': typescriptEslintPlugin,
-    },
+			"@typescript-eslint": typescriptEslintPlugin,
+		},
 		rules: {
 			"@typescript-eslint/consistent-type-exports": "error",
 			"@typescript-eslint/consistent-type-imports": "error",
@@ -70,19 +70,22 @@ const eslintConfig = typescriptESLintConfig(
 			"@typescript-eslint/no-unused-vars": [
 				"error",
 				{
-					"argsIgnorePattern": "^_",
-					"varsIgnorePattern": "^_",
-					"caughtErrorsIgnorePattern": "^_"
-				}
+					argsIgnorePattern: "^_",
+					varsIgnorePattern: "^_",
+					caughtErrorsIgnorePattern: "^_",
+				},
 			],
-			"@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: 'with-single-extends' }],
+			"@typescript-eslint/no-empty-object-type": [
+				"error",
+				{ allowInterfaces: "with-single-extends" },
+			],
 			"@typescript-eslint/array-type": [
 				"error",
 				{
-					"default": "generic"
-				}
+					default: "generic",
+				},
 			],
-		}
+		},
 	},
 	{
 		name: "unicorn",
@@ -102,19 +105,19 @@ const eslintConfig = typescriptESLintConfig(
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
-					"replacements": {
-						"arg": false,
-						"args": false,
-						"env": false
+					replacements: {
+						arg: false,
+						args: false,
+						env: false,
 					},
-					"ignore": ["semVer", "SemVer"]
-				}
+					ignore: ["semVer", "SemVer"],
+				},
 			],
-		}
+		},
 	},
 	{
 		name: "security",
-		plugins: { security: eslintPluginSecurity }
+		plugins: { security: eslintPluginSecurity },
 	},
 	{
 		name: "node",
@@ -163,9 +166,9 @@ const eslintConfig = typescriptESLintConfig(
 			"n/no-callback-literal": "error",
 			"n/no-new-require": "error",
 			"n/no-path-concat": "error",
-			"n/prefer-node-protocol": "error"
-		}
+			"n/prefer-node-protocol": "error",
+		},
 	}
-)
+);
 
-export default [...eslintConfig, eslintConfigPrettier]
+export default [...eslintConfig, eslintConfigPrettier];
