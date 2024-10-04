@@ -15,17 +15,17 @@
 		"lint:fix": "eslint src --fix",
 		"test:unit": "vitest watch",
 		"test:unit:run": "vitest run",
-		"test:coverage": "vitest run --coverage --",
+		"test:coverage": "vitest run --coverage",
 		"build": "tsc -p tsconfig.json",
-		"start": "./bin/${npm_package_name}",
+		"start": "./bin/run.js",
 		"clean": "rm -rf dist bin",
 		"oclif:generate:command": "oclif generate command",
 		"oclif:generate:hook": "oclif generate hook",
 		"oclif:readme": "oclif generate hook",
-		"oclif:pack:deb": "oclif pack deb -r",
-		"oclif:pack:macos": "oclif pack macos -r",
-		"oclif:pack:tarballs": "oclif pack tarballs -r",
-		"oclif:pack:win": "oclif pack win -r",
+		"oclif:pack:deb": "oclif pack deb",
+		"oclif:pack:macos": "oclif pack macos",
+		"oclif:pack:tarballs": "oclif pack tarballs",
+		"oclif:pack:win": "oclif pack win",
 		"commitlint": "commitlint --edit",
 		"commitizen": "exec < /dev/tty && git cz --hook || true"
 	},
@@ -65,11 +65,5 @@
 		"commitizen": {
 			"path": "cz-conventional-changelog"
 		}
-	},
-	"oclif": {
-		"bin": "typescript-cli-boilerplate",
-		"commands": "./dist/commands",
-		"dirname": "typescript-cli-boilerplate",
-		"topicSeparator": " "
 	}
 }
