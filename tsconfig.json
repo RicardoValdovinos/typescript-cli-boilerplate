@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "fastify-api-boilerplate",
+	"display": "typescript-cli-boilerplate",
 	"include": ["src", "package.json"],
 	"exclude": ["node_modules", "dist", "logs"],
 	"compilerOptions": {
@@ -23,6 +23,10 @@
 		"moduleResolution": "NodeNext",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"outDir": "dist"
+		"outDir": "dist",
+		"sourceMap": true,
+		"target": "ESNext",
+		"moduleDetection": "force",
+		"verbatimModuleSyntax": true
 	}
 }
